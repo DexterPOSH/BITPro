@@ -17,7 +17,9 @@ Docker is an open platform for system admins and developers to build, ship and r
 [To be posted]
 
 ## Slides
-[To be posted]
+[Hosted on Slideshare](https://www.slideshare.net/ajeetraina/introduction-to-docker-devopsug)
 
 ## Resource links
-[To be posted]
+[Play with Docker](http://play-with-docker.com)
+[Play with Kubernetes](http://play-with-k8s.com)
+[Play with MOby ] (http://play-with-moby.com/)
