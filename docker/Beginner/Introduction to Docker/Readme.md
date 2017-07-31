@@ -17,10 +17,11 @@ Docker is an open platform for system admins and developers to build, ship and r
 [YouTube link](https://youtu.be/VrXs5j0cVKU)
 
 ## Slides
-[Slides](./introtodocker.pdf)
-[Hosted on Slideshare](https://www.slideshare.net/ajeetraina/introduction-to-docker-containers-docker-captain)
+
+- [Slides](./introtodocker.pdf)
+- [Hosted on Slideshare](https://www.slideshare.net/ajeetraina/introduction-to-docker-containers-docker-captain)
 
 ## Resource links
-[Play with Docker](http://play-with-docker.com)
-[Play with Kubernetes](http://play-with-k8s.com)
-[Play with Moby ] (http://play-with-moby.com/)
+- [Play with Docker](http://play-with-docker.com)
+- [Play with Kubernetes](http://play-with-k8s.com)
+- [Play with Moby](http://play-with-moby.com/)
