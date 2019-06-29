@@ -1,0 +1,53 @@
+{
+    "service": {
+        "suggestion": {
+            "startmode": "Open PowerShell as administrator and run 'Set-Service -Name {0} -StartType {1}'",
+            "status": "Make the service '{0}' in {1} state."
+        },
+        "expectedconfiguration": [
+            {
+                "name": "BITS",
+                "status": "running",
+                "startmode": "automatic"
+            },
+            {
+                "name": "wuauserv",
+                "status": "running",
+                "startmode": "automatic"
+            }
+        ]
+    },
+    "folderpermission": {
+        "suggestion": {
+            "message": "Give {0} permission for {1} user on {2} folder."
+        },
+        "expectedconfiguration": [
+            {
+                "path": "c:\\Deployment\\config",
+                "user": "RDFC\\Test",
+                "permission": "FullControl"
+            },
+            {
+                "path": "c:\\Deployment\\files",
+                "user": "RDFC\\kvprasoon",
+                "permission": "FullControl"
+            }
+        ]
+    },
+    "firewallrule": {
+        "suggestion": {
+            "rulename": "Open wf.msc and create an {0} rule with name '{1}'.",
+            "direction": "Open wf.msc and create the firewall rule '{0}' for {1} connection."
+        },
+        "expectedconfiguration": [
+            {
+                "rulename": "Rule1",
+                "direction": "Inbound"
+            },
+            {
+                "rulename": "Rule2",
+                "direction": "Outbound"
+            }
+        ]
+    }
+}
