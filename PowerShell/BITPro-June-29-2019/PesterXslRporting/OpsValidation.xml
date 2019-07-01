@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="C:\Dev\PowerShell\Pester\Pester.xsl"?>
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="10" errors="0" failures="9" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2019-03-16" time="20:43:51">
+  <environment user="kvprasoon" machine-name="RDFC" cwd="C:\Windows\Temp" user-domain="RDFC" platform="Microsoft Windows 10 Pro|C:\WINDOWS|\Device\Harddisk0\Partition2" nunit-version="2.5.8.0" os-version="10.0.18356" clr-version="4.0.30319.42000" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="TestFixture" name="Pester" executed="True" result="Failure" success="False" time="2.856" asserts="0" description="Pester">
+    <results>
+      <test-suite type="TestFixture" name="C:\Dev\PowerShell\Pester\OpsValidation.tests.ps1" executed="True" result="Failure" success="False" time="2.856" asserts="0" description="C:\Dev\PowerShell\Pester\OpsValidation.tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Describing validation tests post deployment" executed="True" result="Failure" success="False" time="2.8274" asserts="0" description="Describing validation tests post deployment">
+            <results>
+              <test-suite type="TestFixture" name="Post deployment validation tests for serviceses" executed="True" result="Failure" success="False" time="0.4166" asserts="0" description="Post deployment validation tests for serviceses">
+                <results>
+                  <test-case description="Service BITS status should be running" name="Describing validation tests post deployment.Post deployment validation tests for serviceses.Service BITS status should be running" time="0.0167" asserts="0" label="Make the service 'BITS' in running state." success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>Expected 'running', but got Stopped.</message>
+                      <stack-trace>at &lt;ScriptBlock&gt;, C:\Dev\PowerShell\Pester\OpsValidation.tests.ps1: line 37
+37:                     $Service.Status | Should -Be $Status</stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case description="Service BITS startmode should be auto" name="Describing validation tests post deployment.Post deployment validation tests for serviceses.Service BITS startmode should be auto" time="0.1186" asserts="0" label="Open PowerShell as administrator and run 'Set-Service -Name BITS -StartType auto'" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>Expected 'auto', but got Manual.</message>
+                      <stack-trace>at &lt;ScriptBlock&gt;, C:\Dev\PowerShell\Pester\OpsValidation.tests.ps1: line 41
+41:                     $Service.StartType | Should -Be $StartMode</stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case description="Service wuauserv status should be running" name="Describing validation tests post deployment.Post deployment validation tests for serviceses.Service wuauserv status should be running" time="0.02" asserts="0" label="Make the service 'wuauserv' in running state." success="True" result="Success" executed="True" />
+                  <test-case description="Service wuauserv startmode should be auto" name="Describing validation tests post deployment.Post deployment validation tests for serviceses.Service wuauserv startmode should be auto" time="0.0228" asserts="0" label="Open PowerShell as administrator and run 'Set-Service -Name wuauserv -StartType auto'" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>Expected 'auto', but got Manual.</message>
+                      <stack-trace>at &lt;ScriptBlock&gt;, C:\Dev\PowerShell\Pester\OpsValidation.tests.ps1: line 41
+41:                     $Service.StartType | Should -Be $StartMode</stack-trace>
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Post deployment validation tests for folderpermission" executed="True" result="Failure" success="False" time="0.1643" asserts="0" description="Post deployment validation tests for folderpermission">
+                <results>
+                  <test-case description="user RDFC\Test should have FullControl permission on path c:\Deployment\config" name="Describing validation tests post deployment.Post deployment validation tests for folderpermission.user RDFC\Test should have FullControl permission on path c:\Deployment\config" time="0.0149" asserts="0" label="Give FullControl permission for RDFC\Test user on c:\Deployment\config folder." success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>Expected 'FullControl' to be found in collection @(), but it was not found.</message>
+                      <stack-trace>at &lt;ScriptBlock&gt;, C:\Dev\PowerShell\Pester\OpsValidation.tests.ps1: line 58
+58:                 $Access.FileSystemRights | Should -Contain $Permission</stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case description="user RDFC\kvprasoon should have FullControl permission on path c:\Deployment\files" name="Describing validation tests post deployment.Post deployment validation tests for folderpermission.user RDFC\kvprasoon should have FullControl permission on path c:\Deployment\files" time="0.0179" asserts="0" label="Give FullControl permission for RDFC\kvprasoon user on c:\Deployment\files folder." success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>Expected 'FullControl' to be found in collection @(), but it was not found.</message>
+                      <stack-trace>at &lt;ScriptBlock&gt;, C:\Dev\PowerShell\Pester\OpsValidation.tests.ps1: line 58
+58:                 $Access.FileSystemRights | Should -Contain $Permission</stack-trace>
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Post deployment validation tests for firewallrule" executed="True" result="Failure" success="False" time="2.1682" asserts="0" description="Post deployment validation tests for firewallrule">
+                <results>
+                  <test-case description="A Firewall rule with name Rule1 should be available" name="Describing validation tests post deployment.Post deployment validation tests for firewallrule.A Firewall rule with name Rule1 should be available" time="0.0153" asserts="0" label="Open wf.msc and create an Inbound rule with name 'Rule1'." success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>Expected a value, but got $null or empty.</message>
+                      <stack-trace>at &lt;ScriptBlock&gt;, C:\Dev\PowerShell\Pester\OpsValidation.tests.ps1: line 72
+72:                 $Rule | Should -Not -BeNullOrEmpty</stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case description="Firewall rule Rule1 should be allowed for Inbound connection" name="Describing validation tests post deployment.Post deployment validation tests for firewallrule.Firewall rule Rule1 should be allowed for Inbound connection" time="0.0063" asserts="0" label="Open wf.msc and create the firewall rule 'Rule1' for Inbound connection." success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>Parameter set cannot be resolved using the specified named parameters.</message>
+                      <stack-trace>at &lt;ScriptBlock&gt;, C:\Dev\PowerShell\Pester\OpsValidation.tests.ps1: line 76
+76:                 $Rule.Direction | Should -Not $Direction
+</stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case description="A Firewall rule with name Rule2 should be available" name="Describing validation tests post deployment.Post deployment validation tests for firewallrule.A Firewall rule with name Rule2 should be available" time="0.0131" asserts="0" label="Open wf.msc and create an Outbound rule with name 'Rule2'." success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>Expected a value, but got $null or empty.</message>
+                      <stack-trace>at &lt;ScriptBlock&gt;, C:\Dev\PowerShell\Pester\OpsValidation.tests.ps1: line 72
+72:                 $Rule | Should -Not -BeNullOrEmpty</stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case description="Firewall rule Rule2 should be allowed for Outbound connection" name="Describing validation tests post deployment.Post deployment validation tests for firewallrule.Firewall rule Rule2 should be allowed for Outbound connection" time="0.0035" asserts="0" label="Open wf.msc and create the firewall rule 'Rule2' for Outbound connection." success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>Parameter set cannot be resolved using the specified named parameters.</message>
+                      <stack-trace>at &lt;ScriptBlock&gt;, C:\Dev\PowerShell\Pester\OpsValidation.tests.ps1: line 76
+76:                 $Rule.Direction | Should -Not $Direction
+</stack-trace>
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
