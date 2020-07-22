@@ -104,6 +104,7 @@ On a high-level these steps can also be categorized into two parts:
             {
                 var name = "Prateek";
                 Console.WriteLine("Hello World! from "+name);
+
             }
         }
     }
@@ -122,6 +123,7 @@ On a high-level these steps can also be categorized into two parts:
 
     # use the class and methods
     [MyApp.Program]::Main()
+
 	```
 
 <hr>
@@ -202,6 +204,7 @@ In the above example, `System` is a namespace defined in .Net Framework that con
 * Classes enforce design patterns and helps to organize the project as it grows.
 * Object oriented programming - Inheritance, Polymorphism, Function overloading.
 
+
 ### Declaring a Class
 
 Classes are declared by using `class` keyword. 
@@ -210,6 +213,7 @@ Syntax:
 
 ```output
 <Acess Modifier> class <Name of Class>
+
 {
     // Properties, Methods, Events, etc.
 }
@@ -250,9 +254,11 @@ All the constants, properties and methods defined inside body of a `class` are k
 
 2. METHOD - Methods are functions defined in a class, which have access to all the members of a class. The purpose is to perform a functionality for the object of the class, for example `Car` Class has a methods like: `start()` and `stop()`.
 
+
 C# language doesn't support any global variables or methods, that means all the entry point of the program, which the `Main()` method is also defined inside a class. More that that class is just a blueprint and we have to instantiate the class or in other words create objects of the class to access the members.
 
 ### Creating an Object of Class
+
 
 Syntax:
 
@@ -268,6 +274,7 @@ Car tesla = new Car();
 // accessing the members
 tesla.color
 tesla.maxSpeedMPH
+
 tesla.start()
 tesla.stop()
 ```
@@ -278,6 +285,7 @@ So, to create a `tesla` object from `Car` class, we will use the `new` keyword a
 <hr>
 
 ## C# in PowerShell
+
 
 C# can be used in PowerShell to extend the functionalities of features of PowerShell
 
@@ -306,6 +314,7 @@ Add-Type -TypeDefinition $CSharpCode -Language CSharp
 ```
 
 Let's take another example and make a simple calculator in C# and use that in PowerShell
+
 
 ```PowerShell
 $CalcCode = @"
