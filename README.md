@@ -3,6 +3,28 @@
 Respository of the Bangalore ITPro & PowerShell User Group (BITPro & PSBUG).
 Dump of the slides and code samples used in the sessions.
 
+# Events
+
+Below are the details for the events happened from June 2020
+
+|Date|Name|Speakers|
+|----|----|--------|
+|26-Jun-2020|[Scripting to development – An intro to PowerShell and C# classes]|[Deepak Dhami], [Prateek Singh]|
+|10-Jul-2020|[Change your world the way you want: A simple contribution to PowerShell 7]|[Prasoon Karuanan]|
+
+
+[//]: # (Update speakers references here)
+
+[Deepak Dhami]: https://twitter.com/dexterposh
+[Prateek Singh]: https://twitter.com/singhprateik
+[Prasoon Karuanan]: https://twitter.com/prasoonkarunan
+
+
+[//]: # (Update event link references here)
+[Scripting to development – An intro to PowerShell and C# classes]: https://tecoholic.com/scripting-to-development-an-intro-to-powershell-and-c-classes-8104/
+
+[Change your world the way you want: A simple contribution to PowerShell 7]: https://tecoholic.com/change-your-world-the-way-you-want-a-simple-contribution-to-powershell-7-8282/
+
 # TODO
 Below is what we intend to do:
 - Let community vote on the session requests and determine what future topics to cover.
