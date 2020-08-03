@@ -11,10 +11,7 @@ Below are the details for the events happened from June 2020
 |----|----|--------|
 |26-Jun-2020|[Scripting to development – An intro to PowerShell and C# classes]|[Deepak Dhami], [Prateek Singh]|
 |10-Jul-2020|[Change your world the way you want: A simple contribution to PowerShell 7]|[Prasoon Karuanan]|
-<<<<<<< HEAD
 |31-Jul-2020|[Azure Functions for IT Professional]|[Chendrayan Venkatesan]|
-=======
->>>>>>> d14f544950e3de80723e3a160b0d07c787dbde97
 
 
 [//]: # (Update speakers references here)
