@@ -1,5 +1,34 @@
 # Introduction to C#, C# Classes
 
+## Whoami
+
+    * Prateek Singh
+    * Infrastructure Dev
+    * Blog: Ridicurious.com
+    * Linkedin : https://www.linkedin.com/in/prateeksingh1590
+    * Books: 
+        * https://www.apress.com/gp/book/9781484260371
+        * https://leanpub.com/u/prateeksingh
+
+## Agenda
+
+* Introduction to C# Class
+    * Prerequisites
+    * Overview of C# Language
+    * Compilers, Runtime and .NET Framework
+    * C# Hello world using `dotnet` CLI
+    * Interactive C# - Bridging the gap between scripting and development
+    * C# Namespaces
+    * C# Classes
+    * Using C# in PowerShell
+
+## Purpose
+
+    * What it is - Bridge the learning and concept gap between PowerShell and C#
+
+    * What it is not - Deep dive in C# concepts, we will cover this in later sessions of this series.
+
+
 ## Prerequisites
 
 * Install [.NET Core SDK](https://dotnet.microsoft.com/download)
@@ -22,7 +51,7 @@ C# is a powerful, flexible and very popular modern programing language, which is
 
 4. **Type safety** - C# enforces type safety by limiting ways of interaction of object by the object type. Only operations are permitted by type definition are applied to the object, that means type casting objects to incompatible data type is restricted.
 
-5. **Modular** - C# supports modular software development, that means applications can be written in chunks or pieces of code as in functions, classes etc that are reusable, easy to modify and extensible.
+5. **Modular** - C# supports modular software development, that means applications can be written in chunks or pieces of code as in `functions`, `classes` etc that are reusable, easy to modify and extensible.
 
 6. **Secure** - Enable developers to secure their code with prebuilt cryptographic algorithms like Advanced Encryption Standard (`AES`) and Data protection API (`DAPI`).
 
@@ -73,7 +102,9 @@ On a high-level these steps can also be categorized into two parts:
         {
             public static void Main()
             {
-                Console.WriteLine("Hello World!");
+                var name = "Prateek";
+                Console.WriteLine("Hello World! from "+name);
+
             }
         }
     }
@@ -91,7 +122,8 @@ On a high-level these steps can also be categorized into two parts:
     [Reflection.Assembly]::LoadFrom((Resolve-Path .\bin\Debug\netcoreapp3.1\MyApp.dll).path)
 
     # use the class and methods
-    [MyApp.Program]::Main() 
+    [MyApp.Program]::Main()
+
 	```
 
 <hr>
@@ -100,7 +132,7 @@ On a high-level these steps can also be categorized into two parts:
 
 1. C# Interactive Window in Visual Studio 
 
-    C# interactive Window is a simple, REPL (`read-eval-print-loop`) interactive programming environment that takes one user input at a time in form of commands and expressions to let you play with APIs, learn new language features and experiment by enabling us to evaluate them directly with immediate feedback as results to the user. 
+    C# interactive Window is a simple, `REPL` (`read-eval-print-loop`) interactive programming environment that takes one user input at a time in form of commands and expressions to let you play with APIs, learn new language features and experiment by enabling us to evaluate them directly with immediate feedback as results to the user. 
 
     You must have latest version of Visual Studio installed to access the Interactive Window. 
 
@@ -167,23 +199,27 @@ In the above example, `System` is a namespace defined in .Net Framework that con
 
 ## C# Classes
 
-A class is a blueprint or prototype that is used to define an object.
+* A class is a blueprint or prototype that is used to define an object.
+* A Class is a `cohesive unit` of logically similar members (properties\methods)
+* Classes enforce design patterns and helps to organize the project as it grows.
+* Object oriented programming - Inheritance, Polymorphism, Function overloading.
+
 
 ### Declaring a Class
 
 Classes are declared by using `class` keyword. 
 
-```CSharp
-public class MyClass
+Syntax: 
+
+```output
+<Acess Modifier> class <Name of Class>
+
 {
     // Properties, Methods, Events, etc.
 }
 ```
 
 Let's take an example, that we want to define a Car in C#, first thing we have do is create a class declaration for that using the following code snippet:
-
-{format: csharp}
-![Example 1-3. C# Classes](code\chp1\Example 1-3.cs)
 
 
 ```CSharp
@@ -212,22 +248,33 @@ Here, first thing you notice is `public` which is an access modifier, followed b
 
 Class is a programmatical representation of a real world object that has characteristics or properties such as color, height, width and can perform functionalities such as start, stop, move, jump etc. 
 
-All the constants, properties and methods defined inside body of a `class` are known as members of that class, as shown in the Example 1-3 of the above sub-section. Generally speaking members can be:
+All the constants, properties and methods defined inside body of a `class` are known as members of that class. Generally speaking members can be:
 
-1. Property - Properties are attributes or characteristics of the class, which by default are `private` but, if they are `public` they can be accessed using class objects to change the characteristics of the Object. Like for `Car` Class, `color`, `maxSpeed` are properties that can have some default value like `color = "red"`, but these can be accessed and changed on each instance of this class called object.
+1. PROPERTY - Properties are attributes or characteristics of the class, which by default are `private` but, if they are `public` they can be accessed using class objects to change the characteristics of the Object. Like for `Car` Class, `color`, `maxSpeedMPH` are properties that can have some default value like `color = "red"`, but these can be accessed and changed on each instance of this class called object.
 
-2. Method - Methods are functions defined in a class, which have access to all the members of a class. The purpose is to perform a functionality for the object of the class, for example `Car` Class has a methods like: `start()` and `stop()`.
+2. METHOD - Methods are functions defined in a class, which have access to all the members of a class. The purpose is to perform a functionality for the object of the class, for example `Car` Class has a methods like: `start()` and `stop()`.
+
 
 C# language doesn't support any global variables or methods, that means all the entry point of the program, which the `Main()` method is also defined inside a class. More that that class is just a blueprint and we have to instantiate the class or in other words create objects of the class to access the members.
 
 ### Creating an Object of Class
+
+
+Syntax:
+
+```output
+<NameOfClass> NameOfObject = new <NameOfClass>();
+```
+
+Example:
 
 ```csharp
 Car tesla = new Car();
 
 // accessing the members
 tesla.color
-tesla.maxSpeed
+tesla.maxSpeedMPH
+
 tesla.start()
 tesla.stop()
 ```
@@ -238,6 +285,9 @@ So, to create a `tesla` object from `Car` class, we will use the `new` keyword a
 <hr>
 
 ## C# in PowerShell
+
+
+C# can be used in PowerShell to extend the functionalities of features of PowerShell
 
 ```PowerShell
 $CSharpCode = @"
@@ -256,11 +306,14 @@ namespace HelloWorld
 Add-Type -TypeDefinition $CSharpCode -Language CSharp
 
 # creating objects of the class
-[Program]::Main() # throws error
+# throws error because we didn't mention the namespace before class
+[Program]::Main() 
 
-New-Object -TypeName HelloWorld.Program # alternatively
+ New-Object -TypeName HelloWorld.Program # alternatively
 
 ```
+
+Let's take another example and make a simple calculator in C# and use that in PowerShell
 
 
 ```PowerShell
