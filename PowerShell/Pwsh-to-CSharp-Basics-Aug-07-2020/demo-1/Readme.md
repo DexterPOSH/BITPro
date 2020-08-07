@@ -76,7 +76,7 @@ $BOOK
 
 In C#, `using` keyword has 3 main purposes
 
-### C# Add namespaces for type resolution
+### C# - Add namespaces for type resolution
 
 The `using` keyword can bring in the types defined in other namespaces to your program, so that you don't have to fully qualify the types.
 
@@ -93,14 +93,14 @@ using System;
 Console.WriteLine("Using");
 ```
 
-### C# Create aliases for namespaces
+### C# - Create aliases for namespaces
 
 ```csharp
 using ConsoleHost = System.Console;
 ConsoleHost.WriteLine("Hello!");
 ```
 
-### C# using Statement cleanup resoruces
+### C# - using Statement cleanup resoruces
 
 Imagine opening a file in read-write mode and then when you're done with operation (or on an exception), one has to close the file handle etc. Similary with Database connections etc.
 
@@ -122,7 +122,7 @@ In PowerShell `using` statement is primarly used in the classes.
 
 > `using` statement must come before any other statements in a script.
 
-### Pwsh add namespaces for typename resolution
+### Pwsh - add namespaces for typename resolution
 
 Used to specify the .NET namespaces from which to resolve types.
 
@@ -132,7 +132,7 @@ using namespace System.Net;
 [IPAddress]$IPAddress = '10.10.10.10'
 ```
 
-### Pwsh load classes from modules
+### Pwsh - load classes from modules
 
 If there is a PowerShell module, which bundles classes with it using `Import-Module` only imports the functions, aliases etc. but inorder to load the classes as well we need to use the `using` statement.
 
@@ -140,7 +140,7 @@ If there is a PowerShell module, which bundles classes with it using `Import-Mod
 using module <ModuleName>
 ```
 
-### Pwsh load classes from an assembly
+### Pwsh - load classes from an assembly
 
 If you have an assembly which you want to load directly in PowerShell, use this. Remember old days we used `Add-Type` cmdlet to load the assembly file.
 
