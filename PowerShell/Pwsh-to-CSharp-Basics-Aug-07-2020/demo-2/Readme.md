@@ -1,25 +1,55 @@
+## Whoami
+
+    * Prateek Singh
+    * Infrastructure Dev
+    * Blog: Ridicurious.com
+    * Linkedin : https://www.linkedin.com/in/prateeksingh1590
+    * Books: 
+        * https://www.apress.com/gp/book/9781484260371
+        * https://leanpub.com/u/prateeksingh
+
+## Agenda
+    * Types and Variables
+    * Type conversion
+    * Operators, Operands and Expressions
+
+<hr>
+
 # C# Types
+
+* A Data type is an **attribute which tells the compiler how to use and represent the data** in memory.
+* C# is a **strongly-typed language**
+* That means we must declare the type of a variable that indicates the kind of values it is going to store, such as `integer`, `float`, `decimal`, `text`, etc
+* This is also known as **Type Declaration**
+
+    PowerShell Example:
+
+    ```PowerShell
+    $str = "hello world!"
+    $str.GetType()
+    ```
+
+    C# Example:
+
+    ```CSharp
+    string str = "hello world!";
+    str.GetType()
+    ```
 
 All C# data types or simply 'types' can be classified into two broad categories:
 
 1. Value types
 2. Reference types
 
-Following table will help you understand basic differences between value and reference types:
-
-||Value type|Reference type|
-|--|--|--|
-|Stores|Actual value|Memory location|
-|Allocation|Stack, member|Heap|
-|Nullable|Always has value|Maybe null|
-|Default|0|null|
-|Assignment|Copying actual data|Copying reference|
-
-<hr>
+![C# Data Types](images\csharp-data-types.png)
 
 ## 1. Values Types
 
-Value type data types **hold a data value within its own designated memory space** and they can not contain `null` values. Following is a list of  value data types you can use in your C# programs.
+* Holds a value within its own designated memory space
+* Can not contain `null` values
+* Derived from base class `[System.ValueType]`
+
+Following is a list of  value data types you can use in your C# programs.
 
 |.Net Type|Type Alias|Represents|Range|Default Value|
 |--|--|--|--|--|
@@ -41,30 +71,95 @@ Value type data types **hold a data value within its own designated memory space
 
 ## 2. Reference Types
 
-Reference types contain references to other objects and **don't store any actual data in a variable**. In simpler words **they store reference to a memory location**. Reference types bring in the possibility of one or more variables to reference a single object, and similarly any action performed by any one variable changes the referenced object.
+* Contain references to other objects or memory locations
 
-C# provides some built-in reference types such as: `dynamic`, `object`, `string`. In order to declare your own reference types in C#, you can take advantage of the keywords: `class`, `interface` and `delegate`.
+* Actual data is not stored in a variable.
 
-## Type Conversions
+* One or more variables can reference a single object, and any action performed by any one variable changes the referenced object.
+
+PowerShell Example:
+```PowerShell
+$str = "This is a string"
+$str.GetType() # reference type
+
+$str[1].GetType() # value type
+```
+
+C# Example:
+
+```CSharp
+string str = "This is a string";
+str.GetType() // reference type
+
+str[1].GetType() // value type
+```
+
+* Derived from base class `[System.Object]`
+
+
+* C# provides some built-in reference types such as: `dynamic`, `object`, `string`.
+
+* You can create custom reference types using keywords:
+    * `class`
+    * `interface`
+    * `delegate`
+    * `string`
+    * 
+
+```PowerShell
+add-type @"
+public class TestDataType {
+   public string First;
+   public string Last;
+   public string Phone;
+}
+"@
+[TestDataType] @{First="Prateek";Last="Singh"}
+
+$Object = [TestDataType] @{First="Prateek";Last="Singh"}
+$Object.GetType()
+```
+
+<hr>
+
+## Value vs Reference Types:
+
+||Value type|Reference type|
+|--|--|--|
+|Stores|Actual value|Memory location \ Reference to a value|
+|Allocation|Stack|Heap|
+|Life time|Life time of variable|Managed by .Net|
+|Nullable|Always has value|Maybe null|
+|Default|0|null|
+|Assignment|Copying actual data|Copying reference|
+
+
+# Type Conversions
 
 PowerShell Example:
 
 ```PowerShell
 # float to int
 [int] 3.14159
+
 # string to char array
 [char[]] 'prateek'
+
 # int to char
 [char] 97
 [char] 98
+
 # bool to int
 [int] $true
 [int] $false
+
 # int to bool
 [bool] 1
 [bool] 0
+
 # char to int
 [int] [char]'Z'
+
 # int to hex
 "{0:x}" -f 397312
 ```
@@ -72,12 +167,35 @@ PowerShell Example:
 C# Examples:
 
 ```CSharp
-PowerShell Example
+// float to int
+(int) 3.14159
+
+// string to char array
+"prateek".ToCharArray()
+
+// int to char
+(char) 97
+(char) 98
+
+// bool to int
+(int) true // throws error - Cannot convert type 'bool' to 'int
+true ? 1 : 0 // alternatively, use ternary operator
+
+// char to int
+(int) 'Z'
+
+// int to hex
+Convert.ToString(397312,16)
+Convert.ToInt32(Convert.ToString(397312,16))
 ```
+
+![Type Conversion](images\type-conversion.png)
 
 # C# Variables
 
-A variable is the **name of the storage location to store values** of data types supported by the programming language. In C# depending upon the data type of the variable, a memory location with a specific size and layout is assigned to the variable.
+* A variable is the **name of the storage location to store values** of data types supported by the programming language. 
+
+* In C# depending upon the data type of the variable, a memory location with a specific size and layout is assigned to the variable.
 
 To define and initialize a variable we follow the below mentioned syntax:
 
@@ -94,11 +212,33 @@ To define and initialize a variable we follow the below mentioned syntax:
 
 Here, `<data-type>` can be one of data types that we discussed in the previous subsection such as value types: `char`,`int`,`float` and reference types or in other words a user defined data types: `Employee`, `Car` etc. Following are some examples to demonstrate this:
 
-{format: csharp}
-![Example 1-10. Declaring and initializing C# variables](code\chp1\Example 1-10.cs)
+```CSharp
+public class example
+{
+    static void Main(string[] args)
+    {
+        // single variable declaration only
+        bool flag;
+
+        // multiple variable declaration only
+        int a, b, c;
+
+        // variable declaration and initialization
+        double pi = 3.14;
+        char chr = 'a';
+        int num, count = 5;
+        int[] list = { 2, 4, 6, 8, 10 };
+    }
+}
+```
 
 When declaring a variable in your C# program, you must explicitly specify the data type, otherwise you can also use the '`var`' keyword to let the compiler implicitly decide the type of variable at compilation time.
 
+`Var` data type was introduced in C# 3.0. var is used to declare implicitly typed local variable means it tells the compiler to figure out the type of the variable at compilation time.
+
+```csharp
+var i = 0;
+```
 
 # C# Operators, Operands and Expressions
 
@@ -259,4 +399,3 @@ x > y ? "x greater-than y" : "x smaller-than y"
 ```
 
 ![Figure 1-10. C# Ternary operator](images\ternary-operator.png)
-
