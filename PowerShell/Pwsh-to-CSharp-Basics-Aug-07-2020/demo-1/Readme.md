@@ -54,10 +54,22 @@ Write-Host "Hello, This is not a commented statement";
 C# is case-sensitive language 😮, PowerShell is not case-sensitive.
 So be careful and not trip on it.
 
+C# Example:
+
 ```csharp
 string book = "boook1";
 string Book = "book2";
 string BOOK = "book3";
+```
+
+PowerShell is not case-sensitive which means all the below variables refer to the same.
+
+PowerShell Example:
+
+```powershell
+$book = "Book1"
+$BooK
+$BOOK
 ```
 
 ## Using Directive & Statement
