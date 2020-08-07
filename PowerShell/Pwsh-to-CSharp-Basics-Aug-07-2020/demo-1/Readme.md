@@ -108,9 +108,13 @@ Using statement provides syntactic sugar around cleaning up resources if the typ
 
 ```csharp
 string filePath = "test.txt";
-using (StreamWriter sw = File.AppendText(filePath))
-{  
-    sw.Rea(message);
+using (StreamReader reader = new StreamReader(filePath))
+{
+    string line;
+    while ((line =reader.ReadLine()) != null)
+    {
+        Console.WriteLine(line);
+    }
 }
 ```
 
