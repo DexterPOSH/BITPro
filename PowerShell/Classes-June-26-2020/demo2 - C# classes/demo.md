@@ -25,7 +25,6 @@
 ## Purpose
 
     * What it is - Bridge the learning and concept gap between PowerShell and C#
-
     * What it is not - Deep dive in C# concepts, we will cover this in later sessions of this series.
 
 
