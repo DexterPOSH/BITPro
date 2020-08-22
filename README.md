@@ -14,6 +14,7 @@ Below are the details for the events happened from June 2020
 |31-Jul-2020|[Azure Functions for IT Professional]|[Chendrayan Venkatesan]|
 |07-Jul-2020|[PowerShell to C# and back: The basics]|[Deepak Dhami], [Prateek Singh]|
 |14-Jul-2020|[Azure PowerShell – Getting Started]|[Kiran Patnayakuni]|
+|22-Aug-2020|[PowerShell to C# and back: Input/Output, cmdline args, conditional statements and loops]|[Deepak Dhami], [Prateek Singh]|
 
 
 [//]: # (Update speakers references here)
@@ -35,6 +36,7 @@ Below are the details for the events happened from June 2020
 [PowerShell to C# and back: The basics]: https://tecoholic.com/powershell-to-c-and-back-the-basics-8538/
 
 [Azure PowerShell – Getting Started]: https://tecoholic.com/azure-powershell-getting-started-8621/
+[PowerShell to C# and back: Input/Output, cmdline args, conditional statements and loops]: https://tecoholic.com/powershell-to-c-and-back-input-output-cmdline-args-conditional-statements-and-loops-8677/
 
 # TODO
 Below is what we intend to do:
