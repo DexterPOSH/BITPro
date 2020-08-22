@@ -28,13 +28,9 @@ Below are the details for the events happened from June 2020
 
 [//]: # (Update event link references here)
 [Scripting to development – An intro to PowerShell and C# classes]: https://tecoholic.com/scripting-to-development-an-intro-to-powershell-and-c-classes-8104/
-
 [Change your world the way you want: A simple contribution to PowerShell 7]: https://tecoholic.com/change-your-world-the-way-you-want-a-simple-contribution-to-powershell-7-8282/
-
 [Azure Functions for IT Professional]: https://tecoholic.com/azure-functions-for-it-professionals-8455/
-
 [PowerShell to C# and back: The basics]: https://tecoholic.com/powershell-to-c-and-back-the-basics-8538/
-
 [Azure PowerShell – Getting Started]: https://tecoholic.com/azure-powershell-getting-started-8621/
 [PowerShell to C# and back: Input/Output, cmdline args, conditional statements and loops]: https://tecoholic.com/powershell-to-c-and-back-input-output-cmdline-args-conditional-statements-and-loops-8677/
 
