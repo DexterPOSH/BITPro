@@ -1,0 +1,13 @@
+{
+  "default": true,
+  "MD003": { "style": "atx" },
+  "MD033": false,
+  "MD007": { "indent": 4 },
+  "no-hard-tabs": false,
+  "whitespace": false,
+  "line-length": false,
+  "no-bare-urls": false,
+  "first-line-heading": false,
+  "blanks-around-fences": false,
+  "heading" 
+}
