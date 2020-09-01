@@ -12,8 +12,8 @@ Below are the details for the events happened from June 2020
 |26-Jun-2020|[Scripting to development – An intro to PowerShell and C# classes]|[Deepak Dhami], [Prateek Singh]|
 |10-Jul-2020|[Change your world the way you want: A simple contribution to PowerShell 7]|[Prasoon Karunan]|
 |31-Jul-2020|[Azure Functions for IT Professional]|[Chendrayan Venkatesan]|
-|07-Jul-2020|[PowerShell to C# and back: The basics]|[Deepak Dhami], [Prateek Singh]|
-|14-Jul-2020|[Azure PowerShell – Getting Started]|[Kiran Patnayakuni]|
+|07-Aug-2020|[PowerShell to C# and back: The basics]|[Deepak Dhami], [Prateek Singh]|
+|14-Aug-2020|[Azure PowerShell – Getting Started]|[Kiran Patnayakuni]|
 |22-Aug-2020|[PowerShell to C# and back: Input/Output, cmdline args, conditional statements and loops]|[Deepak Dhami], [Prateek Singh]|
 
 
